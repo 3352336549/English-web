@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Studio Student</title>
+  <meta
+    name="description"
+    content="Shanghai grammar cloze practice frontend with bank, practice, result review, and profile pages."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="src/shared/styles/base.css?v=20260429-1">
+  <link rel="stylesheet" href="src/user/styles.css?v=20260429-1">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Go home">
+        <span class="brand-mark">G</span>
+        <span class="brand-copy">
+          <strong>Grammar Studio</strong>
+          <span>Student Portal</span>
+        </span>
+      </a>
+
+      <nav id="nav" class="nav" aria-label="Main navigation"></nav>
+    </header>
+
+    <main id="app" class="page-shell" aria-live="polite">
+      <section class="loading-screen">
+        <div class="loading-dot"></div>
+        <p>Loading practice workspace...</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    window.__GRAMMAR_APP_CONFIG__ = window.__GRAMMAR_APP_CONFIG__ || {
+      apiMode: "mock",
+      // apiMode: "backend",
+      apiBase: "/api"
+    };
+  </script>
+  <script type="module" src="src/user/main.js?v=20260429-1"></script>
+</body>
+</html>
